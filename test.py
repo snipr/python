@@ -1,9 +1,11 @@
 # the first test programming by python
-print("i love python")
-name="hamza"
-print("hello "+ name)
-a,b,c = 1,2,3
-print(a)
-print(c)
-print(b)
-print(" i love\n \"te\tst\"")
+
+myString= "******** i love python *******          "
+
+print(len(myString))
+print(myString.strip("* "))
+print(myString.strip("* ").title())
+myString2= "i-love-pYTHon-and-php-and-msql"
+print(myString2.rsplit("-",2))
+print(myString2.center(50,"*"))
+print(myString2.swapcase())
