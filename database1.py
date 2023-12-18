@@ -8,13 +8,16 @@ cr=db.cursor()
 
 cr.execute("CREATE TABLE IF NOT EXISTS users (user_id INTEGER, name TEXT)")
 
-for key,user in enumerate(myList):
+#for key,user in enumerate(myList):
 
-    cr.execute(f"INSERT INTO users (user_id,name) VALUES ({key+1},'{user}')")
+    #cr.execute(f"INSERT INTO users (user_id,name) VALUES ({key+1},'{user}')")
 
 
 
-print("The data base create and the data inserted")
+#print("The data base create and the data inserted")
+cr.execute("SELECT * FROM users")
+
+print(cr.fetchone())
 
 db.commit()
 db.close()
